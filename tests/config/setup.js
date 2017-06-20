@@ -1,7 +1,7 @@
 require('babel-core/register')
 const path = require('path')
-
 const jsdom = require('jsdom').jsdom
+
 const exposedProperties = ['window', 'navigator', 'document']
 
 global.document = jsdom('')

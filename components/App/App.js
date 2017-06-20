@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './App.scss'
 
-export default class App extends Component {
-  render () {
-    return <button className={styles.app} onClick={this.props.onClick}>Hello World</button>
-  }
+export default function App (props) {
+  return <button className={styles.app} onClick={props.onClick}>Hello World</button>
 }
 
 App.propTypes = {
-  onClick: React.PropTypes.func
+  onClick: PropTypes.func
+}
+
+App.defaultProps = {
+  onClick () {}
 }
